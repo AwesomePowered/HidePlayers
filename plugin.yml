@@ -1,0 +1,10 @@
+name: HidePlayers
+version: 0.1
+author: LaxWasHere
+main: net.lazlecraft.hideplayers.HidePlayers
+commands:
+    hideplayers:
+        description: Hide people from your view.
+        aliases: hideppl
+        permission: hide.people
+        permission-message: You may not!
