@@ -18,10 +18,12 @@ public class HidePlayers extends JavaPlugin {
         	   	for (Player ppl : Bukkit.getOnlinePlayers()) {
         	   		if (p.canSee(ppl))
         	   			p.hidePlayer(ppl);
-        	   		else {
-        	   			p.showPlayer(ppl);
-        	   	}
         	}
+        } else if (commandLabel.equalsIgnoreCase("showplayers") || commandLabel.equalsIgnoreCase("showppl") && p.hasPermission("show.people")) {
+    	   	for (Player ppl : Bukkit.getOnlinePlayers()) {
+    	   		if (!p.canSee(ppl))
+    	   			p.showPlayer(ppl);
+    	   	}
         } return false;
 	}
 }
